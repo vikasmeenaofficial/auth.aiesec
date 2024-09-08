@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIESEC EXPA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="aiesec logo svg.svg" alt="AIESEC">
+    </header>
+
+    <main>
+        <div class="login-container">
+            <div class="line">
+                <b><i><p>Expa</p></i></b>
+                <img src="expa line.svg" alt="">
+            </div>
+            
+            <h2>Login to your AIESEC account</h2>
+            <form id="login-form">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Continue</button>
+
+                <p>Having trouble signing in? <a href="">Reset Password</a></p>
+            </form>
+            <p id="error-message" style="display: none; color: red;">Server is down, please try again later.</p>
+        </div>
+    </main>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            document.getElementById('error-message').style.display = 'block'; 
+        });
+    </script>
+</body>
+</html>
